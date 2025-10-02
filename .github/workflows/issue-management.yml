@@ -1,0 +1,54 @@
+name: Issue Management Automation
+
+on:
+  issues:
+    types: [opened, labeled, closed]
+
+jobs:
+  process-issue:
+    runs-on: ubuntu-latest
+    if: contains(github.event.issue.labels.*.name, 'automated-test')
+
+    steps:
+    - name: Process automated test issue
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const issue = context.payload.issue;
+          const isAutomated = issue.labels.some(label => label.name === 'automated-test');
+
+          if (isAutomated) {
+            // Add automated processing comment
+            github.rest.issues.createComment({
+              issue_number: issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '🤖 **Automated Test Issue Detected**\\n\\n' +
+                    'This issue was created automatically by the Appium CI/CD pipeline.\\n\\n' +
+                    '**Next Steps:**\\n' +
+                    '1. Review the attached test artifacts\\n' +
+                    '2. Identify the root cause of the failure\\n' +
+                    '3. Fix the underlying issue\\n' +
+                    '4. Verify the fix with manual testing\\n' +
+                    '5. Close this issue once resolved\\n\\n' +
+                    'For detailed debugging information, check the CI/CD run artifacts.'
+            });
+
+            // Assign to development team
+            github.rest.issues.addAssignees({
+              issue_number: issue.number,
+              owner: 'PIIARSoftware',
+              repo: 'Bowsmith-Issues',
+              assignees: ['michal.buczko']
+            });
+          }
+
+  update-stats:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'issues' && github.event.action == 'closed'
+
+    steps:
+    - name: Update issue statistics
+      run: |
+        # Generate updated issue statistics
+        node scripts/update-issue-stats.js
