@@ -1,171 +1,152 @@
 # Bowsmith-Issues
 
-Automated test failure tracking and issue management for the Bowsmith iOS archery companion app.
+Public issue tracking and feedback for the Bowsmith iOS archery companion app.
 
 ## Overview
 
-This repository serves as a centralized location for tracking and managing issues related to the Bowsmith iOS app, with a special focus on automated test failures detected by the Appium CI/CD pipeline.
+This repository is the public feedback channel for the Bowsmith iOS app. We welcome bug reports, feature requests, and feedback from our Alpha and Beta testing community.
 
 ## Repository Purpose
 
-- **Automated Issue Tracking**: Automatically created issues for test failures
-- **Manual Bug Reports**: User-submitted bug reports and feature requests
-- **Issue Lifecycle Management**: Structured process for issue resolution
-- **Quality Metrics**: Tracking of issue trends and resolution performance
+- **Bug Reports**: Report issues you encounter while using Bowsmith
+- **Feature Requests**: Suggest new features or improvements
+- **User Feedback**: Share your experience and ideas
+- **Public Roadmap**: Track planned features and improvements
+
+## How to Contribute
+
+### Reporting Bugs 🐛
+
+Found a bug? Help us improve Bowsmith by reporting it!
+
+1. **Check Existing Issues**: Search to see if the bug has already been reported
+2. **Use the Bug Report Template**: Provide detailed information about the issue
+3. **Include Details**: Device model, iOS version, steps to reproduce
+4. **Add Screenshots**: Visual information helps us understand the issue
+
+### Requesting Features ✨
+
+Have an idea for improving Bowsmith?
+
+1. **Check Existing Requests**: See if someone has already suggested it
+2. **Use the Feature Request Template**: Describe your idea clearly
+3. **Explain the Value**: Help us understand how this would improve your experience
+4. **Be Specific**: The more detail, the better we can understand your needs
 
 ## Issue Types
 
-### 1. Automated Test Failures 🤖
-- **Source**: Created automatically by the Appium CI/CD pipeline
-- **Trigger**: When automated tests fail during CI/CD execution
-- **Content**: Detailed failure information, screenshots, logs, and debugging data
-- **Labels**: `automated-test`, device-specific, test-suite-specific, severity
-- **Assignment**: Automatically assigned to development team
+### Bug Reports
+- **Purpose**: Report functional issues or defects
+- **Labels**: `bug`, severity level, component
+- **What to Include**: Reproduction steps, expected vs actual behavior, environment details
 
-### 2. Manual Bug Reports 🐛
-- **Source**: User reports, manual testing, production issues
-- **Content**: Detailed bug descriptions with reproduction steps
-- **Labels**: `bug`, severity level
-- **Assignment**: Manually assigned to appropriate team members
+### Feature Requests
+- **Purpose**: Suggest new features or improvements
+- **Labels**: `enhancement`, priority, component
+- **What to Include**: Use case, expected benefit, any implementation ideas
 
-### 3. Feature Requests ✨
-- **Source**: User suggestions, product roadmap items
-- **Content**: Feature descriptions and use cases
-- **Labels**: `enhancement`, priority level
-- **Assignment**: Product team or development team
-
-## Getting Started
-
-### For Developers
-1. **Issue Assignment**: Check for assigned issues in your notifications
-2. **Issue Investigation**: Review attached artifacts and logs
-3. **Root Cause Analysis**: Identify the underlying cause
-4. **Fix Implementation**: Develop and implement solution
-5. **Testing**: Verify fix with automated tests
-6. **Issue Closure**: Close issue with resolution details
-
-### For Users
-1. **Bug Reports**: Use the bug report template for detailed issue descriptions
-2. **Feature Requests**: Use the feature request template for enhancement suggestions
-3. **Issue Tracking**: Monitor issue status and updates
+### User Feedback
+- **Purpose**: General feedback and suggestions
+- **Labels**: `feedback`, component
+- **What to Include**: Your experience, what works well, what could be better
 
 ## Issue Management Process
 
-### Automated Test Failures
-1. **Detection**: CI/CD pipeline detects test failure
-2. **Issue Creation**: Automated issue created with failure details
-3. **Assignment**: Automatically assigned to development team
-4. **Investigation**: Developer investigates root cause
-5. **Fix**: Issue resolved and fix implemented
-6. **Verification**: Tests re-run to confirm resolution
-7. **Closure**: Issue closed with resolution summary
+1. **Submission**: You submit an issue using our templates
+2. **Triage**: Our team reviews and labels the issue appropriately
+3. **Discussion**: We may ask clarifying questions or discuss solutions
+4. **Planning**: Accepted issues are prioritized in our roadmap
+5. **Implementation**: Features/fixes are developed
+6. **Release**: Updates are rolled out to Alpha/Beta testers
+7. **Closure**: Issue is closed with resolution details
 
-### Manual Issues
-1. **Report**: User creates issue with detailed information
-2. **Triage**: Issue assessed and labeled appropriately
-3. **Assignment**: Assigned to appropriate team member
-4. **Investigation**: Root cause identified and fix developed
-5. **Testing**: Solution tested and verified
-6. **Deployment**: Fix deployed to production
-7. **Closure**: Issue closed with resolution details
-
-## Repository Structure
-
-```
-Bowsmith-Issues/
-├── .github/
-│   ├── ISSUE_TEMPLATE/          # Issue creation templates
-│   └── workflows/               # GitHub Actions workflows
-├── docs/                        # Documentation
-│   └── issue-resolution-process.md
-└── README.md                    # This file
-```
-
-## Labels and Organization
+## Labels
 
 ### Severity Labels
+
 - `critical`: Blocks core functionality, requires immediate attention
 - `high`: Significantly impacts user experience
 - `medium`: Affects functionality but has workarounds
 - `low`: Minor issues or enhancements
 
 ### Type Labels
+
 - `bug`: Functional issues or defects
 - `enhancement`: Feature requests or improvements
-- `automated-test`: Issues created by CI/CD pipeline
+- `feedback`: General user feedback
 - `documentation`: Documentation-related issues
 
 ### Component Labels
-- `appium`: Related to Appium testing infrastructure
-- `competition`: Competition module issues
-- `tinkering`: Tinkering module issues
-- `practice`: Practice module issues
-- `gear`: Equipment management issues
+
+- `competition`: Competition scoring and tracking
+- `practice`: Practice session management
+- `tinkering`: Bow tuning and sight tape features
+- `gear`: Equipment management
 - `ui`: User interface issues
 - `performance`: Performance-related issues
+- `accessibility`: Accessibility concerns
 
-## Tools and Automation
+## Community Guidelines
 
-### GitHub Actions Integration
-- **Automated Issue Creation**: Issues created automatically for test failures
-- **Label Management**: Automatic labeling based on issue content
-- **Status Updates**: Automated status changes based on workflow events
-- **Comment Processing**: Automated comment processing for common patterns
+### Be Respectful
 
-### Testing Integration
-- **Test Failure Detection**: Automated identification of test failures
-- **Screenshot Capture**: Automated screenshot capture for debugging
-- **Log Collection**: Automated log collection and attachment
-- **Artifact Management**: Automated artifact upload and retention
+- Treat everyone with respect and professionalism
+- Provide constructive feedback
+- Be patient - we're a small team working hard to improve Bowsmith
 
-## Contributing
+### Be Detailed
 
-### For Development Team
-1. **Issue Resolution**: Follow the established issue resolution process
-2. **Code Quality**: Maintain high code quality standards
-3. **Testing**: Ensure comprehensive test coverage
-4. **Documentation**: Update documentation as needed
+- Provide as much information as possible
+- Screenshots and screen recordings are extremely helpful
+- Specific reproduction steps help us fix bugs faster
 
-### For External Contributors
-1. **Bug Reports**: Use the bug report template
-2. **Feature Requests**: Use the feature request template
-3. **Code Contributions**: Follow the established development workflow
+### Be Collaborative
 
-## Quality Metrics
+- Engage in discussions constructively
+- Help other users if you've experienced similar issues
+- Share your expertise about archery and bow tuning
 
-### Issue Resolution Performance
-- **Time to Resolution**: Average time from issue creation to closure
-- **Resolution Rate**: Percentage of issues resolved within SLA
-- **Recurrence Rate**: Rate of issues that reoccur after resolution
+## What Happens Next?
 
-### Test Failure Tracking
-- **Failure Rate**: Percentage of automated tests that fail
-- **Failure Trends**: Analysis of failure patterns over time
-- **Issue Volume**: Number of issues by type and severity
+After you submit an issue:
 
-## Emergency Procedures
+1. **Acknowledgment**: We'll review your submission within 1-3 business days
+2. **Triage**: We'll label and prioritize the issue
+3. **Updates**: We'll keep you informed of progress
+4. **Testing**: For bug fixes, we may ask you to test the solution
+5. **Resolution**: We'll close the issue once resolved and released
 
-### Critical Issues
-1. **Immediate Notification**: Alert team leads and stakeholders
-2. **Rapid Investigation**: Quick assessment of impact and scope
-3. **Emergency Fix**: Implement immediate fix if possible
-4. **Communication**: Keep users informed of status
+## Related Information
 
-### Production Issues
-1. **User Impact Assessment**: Evaluate impact on users
-2. **Workaround Identification**: Identify temporary workarounds
-3. **Fix Development**: Develop permanent solution
-4. **Testing**: Thorough testing before deployment
+- **Main Repository**: [Bowsmith](https://github.com/PIIARSoftware/Bowsmith) (Private - for development team)
+- **Test Automation**: Bowsmith-Automation (Private - for QA infrastructure)
 
-## Related Repositories
+## Alpha/Beta Testing Program
 
-- **[Bowsmith](https://github.com/PIIARSoftware/Bowsmith)**: Main iOS app repository
-- **[Bowsmith-AppiumTests](https://github.com/PIIARSoftware/Bowsmith-AppiumTests)**: Appium test automation
+Interested in early access to new features?
+
+- **Alpha Testers**: Get the earliest access, help shape new features
+- **Beta Testers**: Test features before public release, provide feedback
+- **Requirements**: iOS device, TestFlight app, willingness to provide feedback
+
+Contact us if you'd like to join our testing program!
 
 ## Support
 
-For questions about issue management or the development process, please contact the development team.
+For urgent issues or questions:
+
+- **Bug Reports**: Use the issue templates in this repository
+- **General Questions**: Create a discussion issue
+- **Private Concerns**: Contact the development team directly
+
+## Privacy
+
+- This is a **public repository** - do not include sensitive personal information
+- All issues and comments are publicly visible
+- Screenshots should not contain personal or identifiable information
 
 ---
 
-*This repository is maintained by the Bowsmith development team and serves as the central hub for issue tracking and resolution.*
+**Thank you for helping make Bowsmith better!**
+
+*This repository is maintained by the Bowsmith development team to gather feedback and track issues reported by our amazing Alpha and Beta testing community.*
