@@ -48,7 +48,9 @@ jobs:
     if: github.event_name == 'issues' && github.event.action == 'closed'
 
     steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
     - name: Update issue statistics
       run: |
-        # Generate updated issue statistics
         node scripts/update-issue-stats.js
